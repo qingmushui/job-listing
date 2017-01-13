@@ -19,7 +19,7 @@ class Admin::JobsController < ApplicationController
     else
       render :new
     end
-
+end
     def edit
       @job = Job.find(params[:id])
     end
@@ -31,6 +31,7 @@ class Admin::JobsController < ApplicationController
       else
         render :edit
       end
+end
 
       def destroy
         @job = Job.find(params[:id])
@@ -42,5 +43,5 @@ class Admin::JobsController < ApplicationController
 
       def job_params
         params.require(:job).permit(:title, :description)
-      end      
+      end
 end
